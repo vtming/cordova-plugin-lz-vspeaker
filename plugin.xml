@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-lz-vspeaker" version="0.0.1">
+  <name>VSpeaker</name>
+  <description>科大讯飞声纹验证</description>
+  <author>wyf</author>
+  <keywords>科大讯飞,声纹</keywords>
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+  <js-module src="www/vspeaker.js" name="VSpeaker">
+    <clobbers target="lzVSpeaker"/>
+  </js-module>
+  
+  <platform name="android">
+    <source-file src="src/android/VSpeaker.java" target-dir="src/com/longzheng/speaker"/>
+    <source-file src="src/android/IsvUtil.java" target-dir="src/com/longzheng/speaker"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="VSpeaker">
+        <param name="android-package" value="com.longzheng.speaker.VSpeaker"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.RECORD_AUDIO" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    </config-file>
+    <lib-file src="src/android/libs/Msc.jar" />
+    <source-file src="src/android/libs/armeabi/libmsc.so" target-dir="libs/armeabi" />
+
+  </platform>
+
+</plugin>
