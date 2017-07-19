@@ -1,6 +1,21 @@
 # cordova-plugin-lz-vspeaker
 科大讯飞声纹验证cordova插件
 
+## Example
+
+```javascript
+lzVSpeaker.register(
+      function (msg) {
+        console.log("====讯飞SDK返回数据==" + msg);
+      },"595311f0","test6666");
+
+lzVSpeaker.verify(
+      function (msg) {
+        console.log("====讯飞SDK返回数据==" + msg);
+      },"595311f0","test6666");
+
+```
+
 ## 接口分为“注册”和“验证”连个接口
 
 用户需要先注册才能使用验证接口。
