@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-lz-vspeaker",
+  "version": "0.0.1",
+  "description": "Cordova plugin to 讯飞声纹验证",
+  "cordova": {
+    "id": "cordova-plugin-lz-vspeaker",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vtming/cordova-plugin-lz-vspeaker.git"
+  },
+  "keywords": [
+    "cordova",
+    "cordova-android",
+    "讯飞",
+    "声纹验证"
+  ],
+  "author": "wyf",
+  "license": "SB"
+}
